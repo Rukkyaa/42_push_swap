@@ -5,49 +5,50 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 10:17:21 by axlamber          #+#    #+#             */
-/*   Updated: 2023/01/08 21:57:33 by rukkyaa          ###   ########.fr       */
+/*   Created: 2023/01/08 22:28:42 by rukkyaa           #+#    #+#             */
+/*   Updated: 2023/01/09 00:19:16 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "includes/push_swap_bonus.h"
 
-unsigned int	check_error(int argc, char **argv, t_pile *pile)
+void	checker(t_pile **stack_a, t_pile **stack_b)
 {
-	char	*str;
+	char	*line;
 
-	str = NULL;
-	if (!pile)
-		str = "Error : Pile creation failed\n";
-	else if (!pile_special_case(argc, argv))
-		str = "Error : Invalid int found\n";
-	else if (!pile_check_duplicate(pile))
-		str = "Error : There is duplicate in the pile\n";
-	else if (pile_is_sort(pile))
-		str = "Error : The pile is already sort\n";
-	if (str)
-		return (write(STDERR_FILENO, str, ft_strlen(str)));
-	return (0);
+	line = "begin";
+	while (line)
+	{
+		line = get_next_line(0);
+		if (do_move(stack_a, stack_b, line))
+		{
+			free(line);
+			return ;
+		}
+		free(line);
+	}
 }
 
 int	main(int argc, char **argv)
 {
 	t_pile	*stack_a;
+	t_pile	*stack_b;
 
 	if (argc < 2)
 		return (EXIT_FAILURE);
 	stack_a = pile_init(argc, argv);
+	stack_b = NULL;
 	if (check_error(argc, argv, stack_a))
 	{
 		pile_clear(stack_a);
 		return (EXIT_FAILURE);
 	}
-	if (pile_size(stack_a) == 2)
-		stack_a = sort_two(stack_a);
-	else if (pile_size(stack_a) == 3)
-		stack_a = sort_three(stack_a);
+	checker(&stack_a, &stack_b);
+	if (pile_is_sort(stack_a) && !stack_b)
+		write(1, "OK\n", 3);
 	else
-		stack_a = push_swap(stack_a);
+		write(1, "KO\n", 3);
 	pile_clear(stack_a);
+	pile_clear(stack_b);
 	return (EXIT_SUCCESS);
 }
