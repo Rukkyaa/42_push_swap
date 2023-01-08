@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   pile_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axlamber <axlamber@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:39:49 by axlamber          #+#    #+#             */
-/*   Updated: 2023/01/05 12:37:41 by axlamber         ###   ########.fr       */
+/*   Updated: 2023/01/08 21:07:07 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 t_pile	*pile_init(int argc, char **argv)
 {

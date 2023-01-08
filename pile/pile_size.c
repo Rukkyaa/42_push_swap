@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   pile_size.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axlamber <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 15:45:23 by axlamber          #+#    #+#             */
-/*   Updated: 2022/11/29 15:46:38 by axlamber         ###   ########.fr       */
+/*   Updated: 2023/01/08 21:07:39 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 unsigned int	pile_size(t_pile *pile)
 {

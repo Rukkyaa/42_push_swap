@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axlamber <axlamber@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 15:43:48 by axlamber          #+#    #+#             */
-/*   Updated: 2023/01/05 17:56:31 by axlamber         ###   ########.fr       */
+/*   Updated: 2023/01/08 21:49:21 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void	do_swap(t_pile *pile, char *str)
 {
@@ -21,7 +21,7 @@ void	do_swap(t_pile *pile, char *str)
 	tmp = pile->value;
 	pile->value = pile->next->value;
 	pile->next->value = tmp;
-	printf("%s", str);
+	write(1, str, ft_strlen(str));
 }
 
 void	do_push(t_pile **src, t_pile **dest, char *str)
@@ -34,7 +34,7 @@ void	do_push(t_pile **src, t_pile **dest, char *str)
 	(*src)->next = *dest;
 	*dest = *src;
 	*src = tmp;
-	printf("%s", str);
+	write(1, str, ft_strlen(str));
 }
 
 void	do_rotate(t_pile **src, char *str)
@@ -49,7 +49,7 @@ void	do_rotate(t_pile **src, char *str)
 	*src = (*src)->next;
 	last->next = tmp;
 	tmp->next = NULL;
-	printf("%s", str);
+	write(1, str, ft_strlen(str));
 }
 
 void	do_rev_rotate(t_pile **src, char *str)
@@ -66,5 +66,5 @@ void	do_rev_rotate(t_pile **src, char *str)
 	*src = last;
 	last->next = begin;
 	before_last->next = NULL;
-	printf("%s", str);
+	write(1, str, ft_strlen(str));
 }

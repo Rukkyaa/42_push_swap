@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   mediane.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axlamber <axlamber@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 12:40:27 by axlamber          #+#    #+#             */
-/*   Updated: 2023/01/06 17:12:32 by axlamber         ###   ########.fr       */
+/*   Updated: 2023/01/08 21:08:29 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 void	do_mediane(t_pile **stack_a, t_pile **stack_b)
 {

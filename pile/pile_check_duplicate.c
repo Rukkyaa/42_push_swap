@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pile_is_sort.c                                     :+:      :+:    :+:   */
+/*   pile_check_duplicate.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/03 10:12:23 by axlamber          #+#    #+#             */
-/*   Updated: 2023/01/08 21:07:19 by rukkyaa          ###   ########.fr       */
+/*   Created: 2023/01/08 21:16:12 by rukkyaa           #+#    #+#             */
+/*   Updated: 2023/01/08 21:38:45 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	pile_is_sort(t_pile *pile)
+unsigned int	pile_check_duplicate(t_pile *pile)
 {
+	t_pile	*begin;
+	t_pile	*current;
+
+	begin = pile;
 	if (!pile)
 		return (0);
-	while (pile->next)
+	while (begin)
 	{
-		if (pile->value > pile->next->value)
-			return (0);
-		pile = pile->next;
+		current = begin->next;
+		while (current)
+		{
+			if (current->value == begin->value)
+				return (0);
+			current = current->next;
+		}
+		begin = begin->next;
 	}
 	return (1);
 }

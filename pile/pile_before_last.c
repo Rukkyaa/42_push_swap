@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   pile_before_last.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axlamber <axlamber@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 11:05:44 by axlamber          #+#    #+#             */
-/*   Updated: 2023/01/03 11:26:04 by axlamber         ###   ########.fr       */
+/*   Updated: 2023/01/08 21:06:41 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 t_pile	*pile_before_last(t_pile *pile)
 {

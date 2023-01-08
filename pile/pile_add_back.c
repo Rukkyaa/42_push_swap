@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   pile_add_back.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axlamber <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:35:32 by axlamber          #+#    #+#             */
-/*   Updated: 2022/11/29 13:27:47 by axlamber         ###   ########.fr       */
+/*   Updated: 2023/01/08 21:05:52 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void	pile_add_back(t_pile **pile, t_pile *new)
 {

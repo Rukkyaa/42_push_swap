@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axlamber <axlamber@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 10:16:14 by axlamber          #+#    #+#             */
-/*   Updated: 2023/01/06 19:08:13 by axlamber         ###   ########.fr       */
+/*   Updated: 2023/01/08 21:32:41 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 # include <stdbool.h>
 # include <limits.h>
 
@@ -40,7 +41,10 @@ t_pile			*push_swap(t_pile *stack_A);
 /*************************************************************/
 
 int				ft_atoi(char const *str);
+unsigned int	ft_strlen(char const *str);
 void			do_mediane(t_pile **stack_a, t_pile **stack_b);
+unsigned int	pile_check_duplicate(t_pile *pile);
+unsigned int	pile_special_case(int argc, char **argv);
 
 /************************/
 /*  $$$$$$\  $$$$$$$\   */
@@ -83,18 +87,18 @@ int				pile_is_sort(t_pile *pile);
 int				pile_get_min(t_pile *pile);
 int				pile_get_min_mediane(t_pile *pile, int curr);
 int				pile_get_max(t_pile *pile);
-
 int				pile_get_index(t_pile *pile, int value);
-
 
 //Sort
 int				get_moves(t_pile *stack_a, int nb);
-int				get_nb_moves(t_pile *stack_a, t_pile* stack_b);
+int				get_nb_moves(t_pile *stack_a, t_pile *stack_b);
 int				get_best_moves(t_pile *stack_a, t_pile *stack_b);
 void			set_cost(t_pile *stack_a, t_pile *stack_b);
 int				ft_abs(int nb);
 int				get_best_cost(t_pile *stack_b);
+int				get_nearest(t_pile *stack_a, int nb);
 
 t_pile			*sort_two(t_pile *stack_a);
+t_pile			*sort_three(t_pile *stack_a);
 
 #endif

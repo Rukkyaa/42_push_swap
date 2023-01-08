@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   pile_clear.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axlamber <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rukkyaa <rukkyaa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:33:49 by axlamber          #+#    #+#             */
-/*   Updated: 2022/11/29 13:36:43 by axlamber         ###   ########.fr       */
+/*   Updated: 2023/01/08 21:06:53 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void	pile_clear(t_pile *pile)
 {
